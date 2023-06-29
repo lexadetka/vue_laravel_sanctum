@@ -1,0 +1,4 @@
+/admin/node_modules
+/backend/vendor
+/backend/tmp
+/frontend/node_modules
