@@ -48,8 +48,6 @@ services:
       net:
         ipv4_address: 192.168.2.4
 
-
-
   nginx-vue:
     image: nginx:latest
     volumes:
@@ -60,6 +58,17 @@ services:
     networks:
       net:
         ipv4_address: 192.168.2.5
+
+  nginx-admin:
+    image: nginx:latest
+    volumes:
+      - ./admin:/var/www
+      - ./admin/_docker/nginx/conf.d:/etc/nginx/conf.d
+    expose:
+      - 80
+    networks:
+      net:
+        ipv4_address: 192.168.2.7
 
   nginx-proxy:
     image: nginx:latest
