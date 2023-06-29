@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 <template>
 <div class="d-flex flex-column w-25">
   <button class="btn btn-primary" @click="login">Login</button>
-  <button class="btn btn-outline-success">testGet</button>
+  <button class="btn btn-outline-success" @click="testGet">testTGet</button>
 </div>
 </template>
 <script>
