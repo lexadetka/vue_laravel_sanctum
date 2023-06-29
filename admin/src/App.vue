@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 <template>
 <div class="d-flex flex-column w-25">
   <button class="btn btn-primary" @click="login">Login</button>
-  <button class="btn btn-outline-success" @click="testGet">testTGet</button>
+  <button class="btn btn-outline-success" @click="testGetUser">testGetUser</button>
 </div>
 </template>
 <script>
@@ -17,16 +17,16 @@ export default {
   name: 'App',
   methods: {
     login(){
-      axios.get('http://api.alexeybychkovski.site/sanctum/csrf-cookie')
+      axios.get('https://api.alexeybychkovski.site/sanctum/csrf-cookie')
           .then(r=>{
-            axios.post('http://api.alexeybychkovski.site/login', {email: 'user@mail.ru', password: '123'})
+            axios.post('https://api.alexeybychkovski.site/login', {email: 'user@mail.ru', password: '123'})
                 .then(res=>{
                   console.log(res)
                 })
           })
     },
-    testGet(){
-      axios.get('http://api.alexeybychkovski.site/api/user')
+    testGetUser(){
+      axios.get('https://api.alexeybychkovski.site/api/user')
           .then(res=>{
             console.log(res)
           })
