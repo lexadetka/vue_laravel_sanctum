@@ -18,8 +18,4 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' => 'auth:sanctum'], function () {
-
-});
-Route::get('/get', \App\Http\Controllers\TestController::class);
-
+Route::post('/register', \App\Http\Controllers\User\CreateController::class);

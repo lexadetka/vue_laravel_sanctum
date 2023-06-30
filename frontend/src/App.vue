@@ -22,22 +22,22 @@ export default {
   },
   methods: {
     testGet(){
-      axios.get('https://api.alexeybychkovski.site/api/get')
+      axios.get('http://localhost:8000/api/get')
           .then(res=>{
             console.log(res)
           })
     },
     getUser(){
-      axios.get('https://api.alexeybychkovski.site/api/user')
+      axios.get('http://localhost:8000/api/user')
           .then(res=>{
             console.log(res)
           })
     },
     login(){
-      axios.get('https://api.alexeybychkovski.site/sanctum/csrf-cookie')
+      axios.get('http://localhost:8000/sanctum/csrf-cookie')
           .then(r=>{
 		console.log(r)
-            axios.post('https://api.alexeybychkovski.site/login', {email:'user@mail.ru', password: '123'})
+            axios.post('http://localhost:8000/login', {email:'user@mail.ru', password: '123'})
                 .then(res=>{
                   console.log(res)
                 })
